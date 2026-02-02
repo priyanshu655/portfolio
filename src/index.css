@@ -659,3 +659,100 @@ p { font-size: clamp(0.95rem, 3.5vw, 1.15rem); }
 @media (max-width: 640px) {
   .container { padding-left: 20px; padding-right: 20px; }
 }
+
+/* --- Skills Section --- */
+
+.skills {
+  width: 100%;
+  position: relative;
+}
+
+.skills h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 40px;
+  color: var(--text-main);
+}
+
+/* The Grid Container */
+.skill-grid {
+  display: grid;
+  /* This ensures cards fill the space. 
+     Mobile: 1 column, Tablet: 2 columns, Desktop: 3-4 columns */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* Individual Card Styling */
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03); /* Subtle glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  cursor: default;
+}
+
+/* Hover Effect */
+.skill-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* The Left Side (Badge Container) */
+.skill-left {
+  flex-shrink: 0; /* Prevents badge from squishing */
+}
+
+/* The Letter Badge */
+.skill-badge {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  /* Gradient background for the letter box */
+  background: linear-gradient(135deg, #e7e7e7 0%, #a1a1a1 100%);
+  color: #000; /* Dark text on light badge */
+  font-weight: 800;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Text Container */
+.skill-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.skill-tag {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 600px) {
+  .skill-grid {
+    /* On very small screens, allow full width or smaller columns */
+    grid-template-columns: 1fr; 
+  }
+  
+  .skill-card {
+    padding: 14px;
+  }
+}
