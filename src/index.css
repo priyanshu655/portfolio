@@ -871,3 +871,121 @@ p {
     display: block;
   }
 }
+
+/* =====================================
+   MOBILE: DISABLE HOVER TRANSFORMS
+   ===================================== */
+
+@media (hover: none) and (pointer: coarse) {
+  /* project rows */
+  .project-row:hover {
+    transform: none !important;
+  }
+
+  /* lift cards */
+  .project-card-wrapper:hover .lift-card {
+    box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+  }
+
+  .project-card-wrapper:hover .lift-card::before,
+  .project-card-wrapper:hover .lift-card::after {
+    opacity: 0;
+  }
+
+  /* skills */
+  .skill-row:hover {
+    padding-left: 0;
+    border-bottom-color: var(--border-color);
+  }
+
+  .skill-row::after {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+/* =====================================
+   GLOBAL MOBILE SAFETY
+   ===================================== */
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container,
+  .section,
+  .projects,
+  .projects-list {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    transition-duration: 0.12s !important;
+  }
+}
+
+
+/* =====================================
+   HERO TEXT REVEAL MOBILE STABILITY
+   ===================================== */
+
+.hero-title {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(3rem, 10vw, 4.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    word-break: keep-all;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(3rem, 10vw, 4.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(3rem, 10vw, 4.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    word-break: keep-all;
+  }
+}
+
+
+/* =====================================
+   HERO TITLE MOBILE SIZE ADJUSTMENT
+   ===================================== */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(2.6rem, 8.5vw, 3.8rem); /* slightly smaller */
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Extra safety for very small phones */
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: 2.4rem;
+    line-height: 1.15;
+  }
+}
