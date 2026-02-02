@@ -7,9 +7,11 @@ const skills = [
   { name: "React", tag: "Front-end" },
   { name: "Node.js", tag: "Back-end" },
   { name: "MongoDB", tag: "Database" },
-  { name: "Socket.IO", tag: "Realtime" },
-  { name: "WebRTC", tag: "Video" },
+  { name: "MySql", tag: "Database" },
+  { name: "CSS", tag: "Front-end" },
+  { name: "JavaScript", tag: "Front-end" },
   { name: "Express", tag: "API" },
+  {name:"RestFull API",tag:"API"}
 ];
 
 export default function Skills() {
