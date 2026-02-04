@@ -66,7 +66,7 @@ export default function NavBar() {
         </div>
 
         <div className="nav-right">
-          <a className="nav-cta" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <a className="nav-cta" href="/priyanshu-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
 
           <button
             className={`burger ${open ? "open" : ""}`}
