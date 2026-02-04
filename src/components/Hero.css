@@ -1,0 +1,306 @@
+/* Hero Section - Ochi Style */
+@import url('https://fonts.googleapis.com/css2?family=Founders+Grotesk:wght@400;500;600;700&display=swap');
+
+.hero-section {
+  min-height: 100vh;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Founders Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.hero-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Label */
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+}
+
+.label-dot {
+  width: 8px;
+  height: 8px;
+  background: #FFD700;
+  border-radius: 50%;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+.label-text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Title */
+.hero-title {
+  font-size: clamp(4rem, 15vw, 20rem);
+  font-weight: 700;
+  line-height: 0.85;
+  margin: 0;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+}
+
+.hero-title::selection {
+  background: #FFD700;
+  color: #000000;
+}
+
+/* Subtitle */
+.hero-sub {
+  font-size: clamp(1.125rem, 2vw, 1.75rem);
+  line-height: 1.6;
+  color: #888888;
+  max-width: 700px;
+  margin: 1rem 0 0 0;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* CTA Buttons */
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 1.25rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: inherit;
+  letter-spacing: -0.01em;
+}
+
+.cta-primary {
+  background: #FFD700;
+  color: #000000;
+  border: 2px solid #FFD700;
+}
+
+.cta-primary:hover {
+  background: #FFA500;
+  border-color: #FFA500;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.cta-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #333333;
+}
+
+.cta-secondary:hover {
+  border-color: #FFD700;
+  color: #FFD700;
+  transform: translateY(-2px);
+}
+
+.button-arrow {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.cta-primary:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(180deg, #FFD700 0%, transparent 100%);
+  transform-origin: top;
+}
+
+.scroll-text {
+  font-size: 0.75rem;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+/* Background Elements */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100px 100px;
+}
+
+.bg-gradient-orb {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero-container {
+    padding: 0 3rem;
+  }
+
+  .bg-gradient-orb {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 0 2rem;
+    gap: 1.5rem;
+  }
+
+  .hero-label {
+    padding: 0.625rem 1.25rem;
+  }
+
+  .label-text {
+    font-size: 0.75rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero-cta {
+    margin-top: 1.5rem;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    flex: 1;
+    justify-content: center;
+    min-width: 140px;
+  }
+
+  .scroll-indicator {
+    bottom: 2rem;
+  }
+
+  .scroll-line {
+    height: 40px;
+  }
+
+  .bg-gradient-orb {
+    width: 300px;
+    height: 300px;
+    right: -10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 0 1.5rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Text selection */
+::selection {
+  background: #FFD700;
+  color: #000000;
+}
