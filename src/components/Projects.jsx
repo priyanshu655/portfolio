@@ -9,11 +9,11 @@ const projects = [
     link: "http://credisure-gtuj.onrender.com/",
   },
   {
-    title: "Realtime Dashboard",
-    desc: "Live metrics & analytics system",
-    tech: "MERN · Redis",
-    year: "2024",
-    link: "https://github.com/yourusername/realtime-dashboard",
+    title: "Call From Anywhere Anttime Using Meetly",
+    desc: "MEETLY- Video Calling Platfrom",
+    tech: "MERN . WEBRTC .SCOKET.IO . JWTAUTH",
+    year: "202",
+    link: "https://meetlyfront.onrender.com/",
   },
   {
     title: "Analytics Platform",
